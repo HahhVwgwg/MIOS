@@ -15,5 +15,4 @@ data class User(
     @SerializedName("phone") var phone: String,
     @SerializedName("gender") var gender: String,
     @SerializedName("api_token") var apiToken: String,
-
-    )
+)

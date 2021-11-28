@@ -24,7 +24,7 @@ class DetailsFragment :
     @SuppressLint("SetJavaScriptEnabled")
     override fun initViews(savedInstanceState: Bundle?) {
         activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-        val videoUrl = arguments?.getString(Constants.VIDEO_URL) ?: ""
+        var videoUrl = arguments?.getString(Constants.VIDEO_URL) ?: ""
         val lessonId = arguments?.getInt(Constants.LESSON_ID) ?: -1
         val passed = arguments?.getBoolean(Constants.PASSED) ?: false
         binding?.run {
@@ -40,6 +40,9 @@ class DetailsFragment :
                     putInt(Constants.LESSON_ID, lessonId)
                     putBoolean(Constants.PASSED, passed)
                 })
+            }
+            if (videoUrl[videoUrl.length - 1] == '?') {
+                videoUrl = videoUrl.substring(0, videoUrl.length - 1)
             }
             initializePlayer(videoUrl)
         }
