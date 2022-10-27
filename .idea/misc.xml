@@ -45,6 +45,10 @@
         <entry key="..\:/Users/acer/AndroidStudioProjects/DNAPayments/app/src/main/res/layout/loader.xml" value="0.14375" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/DNAPayments/app/src/main/res/layout/white_background.xml" value="0.14375" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/DNAPayments/app/src/main/res/menu/navigation.xml" value="0.14375" />
+        <entry key="app/src/main/res/layout/activity_player.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_registration.xml" value="0.13148148148148148" />
+        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.13148148148148148" />
+        <entry key="app/src/main/res/layout/fragment_lesson.xml" value="0.1" />
       </map>
     </option>
   </component>

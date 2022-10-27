@@ -51,7 +51,7 @@ class RegistrationActivity :
     private fun sendWhatsappSms() {
         val isWhatsappInstalled: Boolean = whatsappInstalledOrNot()
         if (isWhatsappInstalled) {
-            val phoneNumberWithCountryCode = "+77789244399"
+            val phoneNumberWithCountryCode = "+77076538791"
             val message = "Сәлеметсіз бе! Мек курсқа жазылғым келеді. Қалай жазылсам болады?"
 
             startActivity(

@@ -6,12 +6,11 @@ plugins {
 }
 
 android {
-    compileSdk 30
-
+    compileSdk 31
     defaultConfig {
         applicationId "com.mios"
         minSdk 21
-        targetSdk 30
+        targetSdk 31
         versionCode 6
         versionName "1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -111,5 +110,8 @@ dependencies {
     implementation 'com.linsea:universalvideoview:1.1.0@aar'
 
     implementation 'bg.devlabs:fullscreen-video-view:1.2.0'
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.26'
 
 }
