@@ -42,24 +42,49 @@
             android:layout_height="@dimen/_150sdp"
             android:layout_centerInParent="true" />
 
-        <FrameLayout
+        <RelativeLayout
             android:id="@+id/video_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:background="@drawable/white_background"
-            android:visibility="invisible"
+            android:visibility="visible"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <bg.devlabs.fullscreenvideoview.FullscreenVideoView
-                android:id="@+id/fullscreenVideoView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
-        </FrameLayout>
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/playerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clickable="false"
+                app:autoPlay="false"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewClick"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/playerFullButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_full_screen" />
+
+        </RelativeLayout>
 
         <Button
             android:id="@+id/pass_quiz"

@@ -28,11 +28,13 @@
         </activity>
         <activity
             android:name=".presentation.activity.MainActivity"
-            android:configChanges="screenSize|orientation"
-            android:screenOrientation="portrait" />
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+          />
+        <activity android:name=".presentation.youtube_player.PlayerActivity"
+           />
         <activity
             android:name=".presentation.activity.RegistrationActivity"
-            android:screenOrientation="portrait" />
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout" />
     </application>
 
 </manifest>

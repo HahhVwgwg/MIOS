@@ -39,15 +39,15 @@ class LessonsFragment :
             vm.title.set(courseTitle)
             recyclerView.adapter = adapter
             vm.getLessonByCourseId(courseId)
-            vm.isRefreshing.observe(viewLifecycleOwner, {
+            vm.isRefreshing.observe(viewLifecycleOwner) {
                 refresh.isRefreshing = it
-            })
-            vm.lessonList.observe(viewLifecycleOwner, {
+            }
+            vm.lessonList.observe(viewLifecycleOwner) {
                 it.forEachIndexed { index, item ->
                     item.position = index
                 }
                 adapter?.setData(it)
-            })
+            }
             refresh.setOnRefreshListener {
                 vm.getLessonByCourseId(courseId)
             }
